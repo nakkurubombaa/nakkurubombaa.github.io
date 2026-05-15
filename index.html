@@ -217,6 +217,22 @@
       line-height: 1;
     }
     .hero-kanji-vert .red { color: var(--red); }
+    /* 言語切替（ヒーロー内） */
+    .hero-lang {
+      display: flex; align-items: center; gap: 0;
+      margin-top: 24px;
+      border: 1.5px solid rgba(0,0,0,0.18);
+    }
+    .hero-lang-btn {
+      padding: 6px 18px; background: none; border: none; cursor: pointer;
+      font-family: var(--display); font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--dark-gray); transition: var(--t);
+    }
+    .hero-lang-btn.active { background: var(--black); color: #fff; }
+    .hero-lang-btn:hover:not(.active) { background: rgba(0,0,0,0.06); }
+    .hero-lang-sep { width: 1.5px; height: 18px; background: rgba(0,0,0,0.18); flex-shrink: 0; }
+
     /* 右側 */
     .hero-right {
       display: flex; flex-direction: column;
@@ -866,6 +882,11 @@
             <span class="sns-label">Ameblo</span>
           </a>
         </div>
+        <div class="hero-lang">
+          <button class="hero-lang-btn active" id="heroLangJa" onclick="setLang('ja')">日本語</button>
+          <div class="hero-lang-sep"></div>
+          <button class="hero-lang-btn" id="heroLangEn" onclick="setLang('en')">English</button>
+        </div>
       </div>
     </div>
     <div class="hero-spacer" aria-hidden="true"></div>
@@ -929,10 +950,6 @@
         <div class="about-rule"></div>
 
         <div class="about-stats">
-          <div class="stat-item lang-ja">
-            <span class="stat-label">生年月日</span>
-            <span class="stat-value">1993年2月24日</span>
-          </div>
           <div class="stat-item">
             <span class="stat-label lang-ja">身長</span>
             <span class="stat-label lang-en">Height</span>
@@ -1744,6 +1761,12 @@
     document.querySelectorAll('.lang-btn').forEach(b => {
       b.classList.toggle('active', b.dataset.lang === lang);
     });
+    const heroJa = document.getElementById('heroLangJa');
+    const heroEn = document.getElementById('heroLangEn');
+    if (heroJa && heroEn) {
+      heroJa.classList.toggle('active', lang === 'ja');
+      heroEn.classList.toggle('active', lang === 'en');
+    }
     localStorage.setItem('nh-lang', lang);
   }
 
