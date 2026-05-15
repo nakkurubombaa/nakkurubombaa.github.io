@@ -1,0 +1,1769 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>橋本菜摘 | Natsumi Hashimoto — Official Website</title>
+  <meta name="description" content="橋本菜摘 オフィシャルウェブサイト。俳優。ハリー・ポッターと呪いの子 日本版オリジナルキャスト。/ Official site of Natsumi Hashimoto, Japanese actress.">
+  <meta property="og:title" content="橋本菜摘 | Natsumi Hashimoto">
+  <meta property="og:description" content="Japanese Actress — Tokyo · New York">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* ── RESET ── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Noto Sans JP', 'Helvetica Neue', sans-serif;
+      color: #1a1a1a; background: #fff;
+      line-height: 1.8; -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    ul { list-style: none; }
+
+    /* ── VARIABLES ── */
+    :root {
+      --red:        #C8102E;
+      --red-dark:   #9B0C23;
+      --white:      #ffffff;
+      --off-white:  #fafafa;
+      --light-gray: #f2f2f2;
+      --mid-gray:   #999;
+      --dark-gray:  #555;
+      --black:      #1a1a1a;
+      --display:    'Oswald', sans-serif;
+      --serif-jp:   'Noto Serif JP', serif;
+      --sans:       'Noto Sans JP', sans-serif;
+      --max:        1080px;
+      --t:          0.28s ease;
+    }
+
+    /* ── LANGUAGE TOGGLE ── */
+    .lang-en { display: none; }
+    body.show-en .lang-ja { display: none; }
+    body.show-en div.lang-en   { display: block; }
+    body.show-en p.lang-en     { display: block; }
+    body.show-en h2.lang-en    { display: block; }
+    body.show-en ul.lang-en    { display: block; }
+    body.show-en li.lang-en    { display: list-item; }
+    body.show-en span.lang-en  { display: inline; }
+    body.show-en a.lang-en     { display: inline; }
+    body.show-en td.lang-en    { display: table-cell; }
+    body.show-en tr.lang-en    { display: table-row; }
+
+    /* ── HEADER ── */
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 300;
+      height: 62px;
+      background: rgba(255,255,255,0.97);
+      border-bottom: 2px solid var(--red);
+      padding: 0 40px;
+      display: flex; align-items: center; justify-content: space-between;
+      backdrop-filter: blur(8px);
+    }
+    /* ── LOGO ⑤ NH イニシャル ── */
+    .logo-nh {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none;
+    }
+    .logo-nh-initial {
+      font-family: var(--display);
+      font-size: 1.55rem; font-weight: 700;
+      letter-spacing: -0.02em; color: #fff;
+      background: var(--red);
+      width: 44px; height: 44px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .logo-nh-text {
+      display: flex; flex-direction: column; gap: 2px;
+    }
+    .logo-nh-name {
+      font-family: var(--serif-jp);
+      font-size: 1.08rem; font-weight: 600;
+      letter-spacing: 0.08em; color: var(--black);
+      line-height: 1.1;
+    }
+    .logo-nh-sub {
+      font-family: var(--display);
+      font-size: 0.47rem; font-weight: 300;
+      letter-spacing: 0.28em; text-transform: uppercase;
+      color: var(--dark-gray);
+    }
+    nav { display: flex; align-items: center; gap: 24px; }
+    nav a {
+      font-family: var(--display);
+      font-size: 0.72rem; font-weight: 400;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--dark-gray); transition: color var(--t);
+      position: relative;
+    }
+    nav a::after {
+      content: ''; position: absolute; left: 0; bottom: -3px;
+      width: 0; height: 1.5px; background: var(--red);
+      transition: width var(--t);
+    }
+    nav a:hover { color: var(--red); }
+    nav a:hover::after { width: 100%; }
+    .lang-toggle {
+      display: flex; align-items: center;
+      border: 1.5px solid var(--red); overflow: hidden;
+    }
+    .lang-btn {
+      padding: 4px 10px; background: none; border: none; cursor: pointer;
+      font-family: var(--display); font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.08em; color: var(--red);
+      transition: background var(--t);
+    }
+    .lang-btn.active { background: var(--red); color: #fff; }
+    .lang-btn:hover:not(.active) { background: rgba(200,16,46,0.08); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { width: 22px; height: 2px; background: var(--black); }
+
+    /* ── MOBILE NAV ── */
+    .mobile-nav {
+      display: none; position: fixed;
+      top: 62px; left: 0; right: 0; z-index: 290;
+      background: rgba(255,255,255,0.98);
+      border-bottom: 2px solid var(--red);
+      padding: 24px 28px;
+      flex-direction: column; gap: 4px;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      font-family: var(--display);
+      font-size: 0.88rem; font-weight: 400;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--dark-gray); padding: 10px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .mobile-nav .lang-toggle { align-self: flex-start; margin-top: 12px; }
+
+    /* ═══════════════════════════════════════
+       HERO — V3 スタイル
+       左: 縦書き明朝体  |  右: NATSUMI/○/HASHIMOTO
+    ═══════════════════════════════════════ */
+    #hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      background: var(--white);
+      padding: 90px 40px 8px;
+      position: relative; overflow: hidden;
+    }
+    .hero-inner {
+      display: flex; align-items: flex-end;
+      gap: clamp(56px, 8vw, 120px);
+      max-width: var(--max); width: 100%;
+      justify-content: center;
+    }
+    /* 左側: 縦書き漢字 */
+    /* padding-bottom = hero-meta高さ分: 縦書りの底辺がHASHIMOTOの底辺に揃う */
+    .hero-left { flex-shrink: 0; width: clamp(2.2rem, 4.5vw, 3.8rem); padding-bottom: calc(clamp(40px, 6vw, 68px) + 70px); }
+    /* 右側と幅を揃えるミラー: hero-rightをページ中央に配置するため */
+    .hero-spacer { flex-shrink: 0; width: clamp(2.2rem, 4.5vw, 3.8rem); visibility: hidden; }
+    .hero-kanji-vert {
+      font-family: var(--serif-jp);
+      font-weight: 400;
+      font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+      letter-spacing: 0.25em;
+      writing-mode: vertical-lr;
+      color: var(--black);
+      line-height: 1;
+    }
+    .hero-kanji-vert .red { color: var(--red); }
+    /* 右側 */
+    .hero-right {
+      display: flex; flex-direction: column;
+      align-items: center; text-align: center;
+    }
+    /* hero-right内のmeta(sub+sns)コンテナ */
+    .hero-meta {
+      display: flex; flex-direction: column; align-items: center;
+    }
+    /* NATSUMI / 円 / HASHIMOTO */
+    .hero-name-wrap {
+      position: relative;
+      display: flex; flex-direction: column; align-items: center;
+    }
+    .hero-circle {
+      position: absolute;
+      width: clamp(170px, 26vw, 260px);
+      height: clamp(170px, 26vw, 260px);
+      border-radius: 50%; background: var(--red);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+    }
+    .hero-eng {
+      position: relative; z-index: 2;
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: clamp(3.5rem, 9vw, 8rem);
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--black);
+      line-height: 0.86;
+    }
+    /* サブタイトル */
+    .hero-sub {
+      font-family: var(--display);
+      font-size: clamp(0.72rem, 1.4vw, 0.95rem);
+      font-weight: 300;
+      letter-spacing: 0.55em;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-top: clamp(40px, 6vw, 68px);
+    }
+    /* SNSリンク（ヒーロー内・フッタースタイル） */
+    .hero-sns {
+      display: flex; gap: 8px;
+      margin-top: 18px; flex-wrap: wrap; justify-content: center;
+    }
+    .hero-sns a {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 7px 14px; border: 1.5px solid var(--red);
+      color: var(--red);
+      font-family: var(--display);
+      font-size: 0.64rem; font-weight: 400;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      transition: var(--t); white-space: nowrap;
+    }
+    .hero-sns a:hover { background: var(--red); color: #fff; }
+    .hero-sns a svg { width: 17px; height: 17px; fill: currentColor; flex-shrink: 0; }
+    /* スクロールヒント */
+    .scroll-hint {
+      position: absolute; bottom: 28px; left: 50%;
+      transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      font-family: var(--display);
+      font-size: 0.62rem; font-weight: 300;
+      letter-spacing: 0.25em; color: var(--mid-gray);
+    }
+    .scroll-hint::after {
+      content: ''; width: 1px; height: 36px; background: var(--red);
+      animation: scrollDown 1.6s ease infinite;
+    }
+    @keyframes scrollDown {
+      0%   { opacity: 0; transform: scaleY(0); transform-origin: top; }
+      50%  { opacity: 1; transform: scaleY(1); }
+      100% { opacity: 0; transform: scaleY(0); transform-origin: bottom; }
+    }
+
+    /* ── SECTIONS COMMON ── */
+    section { padding: 88px 24px; }
+    .container { max-width: var(--max); margin: 0 auto; }
+    .section-header { margin-bottom: 52px; width: fit-content; }
+    .section-eyebrow {
+      font-family: var(--display);
+      font-size: 0.68rem; font-weight: 300;
+      letter-spacing: 0.45em; text-transform: uppercase;
+      color: var(--red); margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: var(--display), var(--sans);
+      font-size: clamp(1.9rem, 5vw, 3rem);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      line-height: 1.05; color: var(--black);
+    }
+    .section-title.jp {
+      font-family: var(--sans);
+      font-weight: 700;
+      font-size: clamp(1.7rem, 4.5vw, 2.6rem);
+      text-transform: none;
+      letter-spacing: 0.06em;
+    }
+    .section-rule {
+      width: 100%; height: 2px; background: var(--red);
+      margin-top: 14px;
+    }
+
+    /* ── NEWS ── */
+    #news { background: var(--white); }
+    .news-list { display: flex; flex-direction: column; }
+    .news-item {
+      display: grid; grid-template-columns: 120px 1fr;
+      gap: 20px; align-items: baseline;
+      padding: 20px 0; border-bottom: 1px solid #ebebeb;
+    }
+    .news-item:first-child { border-top: 1px solid #ebebeb; }
+    .news-date {
+      font-family: var(--display);
+      font-size: 0.72rem; font-weight: 300;
+      letter-spacing: 0.06em; color: var(--mid-gray);
+      white-space: nowrap;
+    }
+    .news-tag {
+      display: inline-block;
+      background: var(--red); color: #fff;
+      font-family: var(--display);
+      font-size: 0.6rem; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 2px 8px; margin-right: 10px; vertical-align: middle;
+    }
+    .news-text { font-size: 0.88rem; line-height: 1.75; color: var(--black); }
+    .news-text a { color: var(--red); text-decoration: underline; }
+
+    /* ── ABOUT ── */
+    #about { background: var(--off-white); }
+    .about-grid {
+      display: grid; grid-template-columns: 280px 1fr;
+      gap: 60px; align-items: start;
+    }
+    .about-photo {
+      width: 100%; aspect-ratio: 3/4;
+      background: var(--light-gray);
+      display: flex; align-items: center; justify-content: center;
+      border: 1px solid #e4e4e4; position: relative; overflow: hidden;
+    }
+    .about-photo img { width: 100%; height: 100%; object-fit: cover; }
+    .about-photo-placeholder {
+      display: flex; flex-direction: column;
+      align-items: center; gap: 10px;
+    }
+    .photo-icon { font-size: 2.2rem; opacity: 0.25; }
+    /* 名前ブロック */
+    .about-name-ja {
+      font-family: var(--serif-jp);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 400; letter-spacing: 0.12em;
+      color: var(--black); margin-bottom: 2px;
+    }
+    .about-name-en {
+      font-family: var(--display);
+      font-size: clamp(1rem, 2.5vw, 1.5rem);
+      font-weight: 300; letter-spacing: 0.25em;
+      text-transform: uppercase; color: var(--mid-gray);
+      margin-bottom: 4px;
+    }
+    .about-yomi {
+      font-size: 0.78rem; letter-spacing: 0.15em;
+      color: var(--mid-gray); margin-bottom: 20px;
+    }
+    .about-rule {
+      width: 36px; height: 2px; background: var(--red); margin-bottom: 20px;
+    }
+    .about-stats {
+      display: flex; gap: 28px; margin-bottom: 26px;
+      padding: 16px 0;
+      border-top: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0;
+    }
+    .stat-item { display: flex; flex-direction: column; gap: 3px; }
+    .stat-label {
+      font-family: var(--display);
+      font-size: 0.62rem; font-weight: 300;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--mid-gray);
+    }
+    .stat-value { font-size: 0.88rem; font-weight: 500; color: var(--black); }
+    .about-bio {
+      font-size: 0.88rem; line-height: 2.0;
+      color: var(--dark-gray); margin-bottom: 26px;
+    }
+    .highlights { display: flex; flex-direction: column; gap: 9px; }
+    .highlight-item {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 0.83rem; color: var(--dark-gray);
+    }
+    .highlight-item::before {
+      content: '—'; color: var(--red); flex-shrink: 0; margin-top: 1px;
+    }
+
+    /* ── WORKS ── */
+    #works { background: var(--white); }
+    .works-tabs {
+      display: flex; margin-bottom: 36px;
+      border-bottom: 2px solid #e8e8e8; flex-wrap: wrap;
+    }
+    .tab-btn {
+      padding: 10px 20px;
+      background: none; border: none; cursor: pointer;
+      font-family: var(--display);
+      font-size: 0.72rem; font-weight: 400;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--mid-gray); transition: color var(--t);
+      position: relative;
+    }
+    .tab-btn.active { color: var(--red); }
+    .tab-btn.active::after {
+      content: '';
+      position: absolute; bottom: -2px; left: 0; right: 0;
+      height: 2px; background: var(--red);
+    }
+    .tab-btn:hover { color: var(--red); }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+    .works-table { width: 100%; border-collapse: collapse; }
+    .works-table tr { border-bottom: 1px solid #f0f0f0; }
+    .works-table tr:hover { background: var(--off-white); }
+    .works-table td { padding: 13px 10px; font-size: 0.86rem; vertical-align: top; }
+    .works-table .col-year {
+      width: 58px; color: var(--mid-gray);
+      font-family: var(--display); font-weight: 300;
+      font-size: 0.78rem; white-space: nowrap;
+    }
+    .works-table .col-title { font-weight: 500; color: var(--black); }
+    .works-table .col-role { color: var(--dark-gray); }
+    .works-table .col-venue { color: var(--mid-gray); font-size: 0.78rem; }
+    .works-table .col-dir   { color: var(--mid-gray); font-size: 0.78rem; }
+    .works-producer { display: block; font-size: 0.72em; color: var(--mid-gray); letter-spacing: 0.04em; margin-bottom: 2px; }
+    .works-badge {
+      display: inline-block;
+      background: var(--red); color: #fff;
+      font-family: var(--display);
+      font-size: 0.58rem; font-weight: 500;
+      letter-spacing: 0.06em; padding: 2px 7px;
+      margin-left: 7px; vertical-align: middle;
+    }
+    .training-list { display: flex; flex-direction: column; gap: 14px; }
+    .training-item {
+      padding: 18px 20px;
+      border-left: 3px solid var(--red);
+      background: var(--off-white);
+    }
+    .training-school {
+      font-family: var(--display);
+      font-size: 0.88rem; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--black);
+    }
+    .training-detail {
+      font-size: 0.82rem; color: var(--dark-gray); margin-top: 5px; line-height: 1.7;
+    }
+
+    /* ── REEL ── */
+    #reel { background: var(--black); padding: 88px 24px; }
+    #reel .section-eyebrow { color: #E8455A; }
+    #reel .section-title { color: #fff; }
+    #reel .section-rule { background: var(--red); }
+    .reel-content { text-align: center; padding: 48px 0 16px; }
+    .reel-text {
+      color: #aaa; font-size: 0.88rem;
+      margin-bottom: 36px; line-height: 2;
+    }
+    .reel-btn {
+      display: inline-flex; align-items: center; gap: 12px;
+      padding: 15px 44px;
+      background: var(--red); color: #fff;
+      font-family: var(--display);
+      font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      transition: background var(--t);
+    }
+    .reel-btn:hover { background: var(--red-dark); }
+    .reel-btn svg { width: 17px; height: 17px; }
+
+    /* ── GALLERY ── */
+    #gallery { background: var(--white); }
+    .gallery-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
+    }
+    .gallery-item {
+      aspect-ratio: 3/4; background: var(--light-gray);
+      overflow: hidden; position: relative; cursor: zoom-in;
+    }
+    .gallery-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.5s ease; display: block;
+    }
+    .gallery-item:hover img { transform: scale(1.04); }
+    .gallery-item.wide { grid-column: span 2; aspect-ratio: 4/3; }
+
+    /* ── LIGHTBOX ── */
+    .lightbox-overlay {
+      display: none; position: fixed; inset: 0; z-index: 900;
+      background: rgba(0,0,0,0.93);
+      align-items: center; justify-content: center; cursor: zoom-out;
+    }
+    .lightbox-overlay.open { display: flex; }
+    .lightbox-overlay img {
+      max-width: 92vw; max-height: 92vh; object-fit: contain;
+      box-shadow: 0 8px 60px rgba(0,0,0,0.6); cursor: default;
+    }
+    .lightbox-close {
+      position: absolute; top: 22px; right: 30px;
+      font-size: 2.4rem; color: rgba(255,255,255,0.75);
+      background: none; border: none; cursor: pointer; line-height: 1;
+      transition: color 0.2s;
+    }
+    .lightbox-close:hover { color: #fff; }
+
+    /* ── PRESS ── */
+    #press { background: var(--off-white); }
+    .press-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .press-card {
+      background: #fff; border: 1px solid #e8e8e8;
+      padding: 26px 22px;
+      display: flex; flex-direction: column; gap: 10px;
+      transition: border-color var(--t), box-shadow var(--t);
+    }
+    .press-card:hover {
+      border-color: var(--red);
+      box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+    }
+    .press-source {
+      font-family: var(--display);
+      font-size: 0.65rem; font-weight: 600;
+      letter-spacing: 0.22em; text-transform: uppercase; color: var(--red);
+    }
+    .press-date { font-size: 0.72rem; color: var(--mid-gray); }
+    .press-title { font-size: 0.92rem; font-weight: 500; color: var(--black); line-height: 1.5; }
+    .press-desc  { font-size: 0.8rem; color: var(--dark-gray); line-height: 1.75; }
+    .press-link {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-family: var(--display);
+      font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--red); margin-top: auto; transition: gap var(--t);
+    }
+    .press-link:hover { gap: 9px; }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--white); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+    .contact-info { display: flex; flex-direction: column; gap: 18px; }
+    .contact-info p { font-size: 0.88rem; color: var(--dark-gray); line-height: 1.9; }
+    .contact-email {
+      display: inline-flex; align-items: center; gap: 9px;
+      font-size: 0.83rem; color: var(--red); font-weight: 500;
+      transition: var(--t);
+    }
+    .contact-email:hover { text-decoration: underline; }
+    .contact-form { display: flex; flex-direction: column; gap: 14px; }
+    .form-group { display: flex; flex-direction: column; gap: 5px; }
+    .form-label {
+      font-family: var(--display);
+      font-size: 0.66rem; font-weight: 400;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--dark-gray);
+    }
+    .form-control {
+      padding: 11px 14px; border: 1.5px solid #e0e0e0;
+      font-family: var(--sans); font-size: 0.86rem; color: var(--black);
+      background: #fff; outline: none;
+      transition: border-color var(--t);
+    }
+    .form-control:focus { border-color: var(--red); }
+    textarea.form-control { min-height: 130px; resize: vertical; }
+    .form-submit {
+      padding: 13px 36px; background: var(--red); color: #fff;
+      border: none; cursor: pointer;
+      font-family: var(--display);
+      font-size: 0.76rem; font-weight: 600;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      transition: background var(--t); align-self: flex-start;
+    }
+    .form-submit:hover { background: var(--red-dark); }
+    .form-success {
+      padding: 11px 14px; background: #e8f5e9;
+      color: #2e7d32; font-size: 0.83rem; display: none;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--black); color: #aaa;
+      padding: 52px 24px 32px;
+    }
+    .footer-inner {
+      max-width: var(--max); margin: 0 auto;
+      display: flex; flex-direction: column;
+      gap: 32px; align-items: center; text-align: center;
+    }
+    .footer-name {
+      font-family: var(--serif-jp);
+      font-size: 1.6rem; font-weight: 400;
+      color: #fff; letter-spacing: 0.15em;
+    }
+    .footer-name-en {
+      font-family: var(--display);
+      font-size: 0.8rem; font-weight: 300;
+      letter-spacing: 0.35em; text-transform: uppercase;
+      color: #666; margin-top: 4px;
+    }
+    .sns-links { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+    .sns-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 7px 14px; border: 1px solid #333;
+      color: #888; font-family: var(--display);
+      font-size: 0.66rem; font-weight: 300;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      transition: var(--t);
+    }
+    .sns-link:hover { border-color: var(--red); color: #fff; }
+    .sns-link svg { width: 13px; height: 13px; fill: currentColor; flex-shrink: 0; }
+    .footer-copy {
+      font-family: var(--display);
+      font-size: 0.65rem; font-weight: 300;
+      letter-spacing: 0.12em; color: #444;
+    }
+
+    /* ── INSTAGRAM ── */
+    #instagram { background: var(--white); }
+    .instagram-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 32px;
+    }
+    .instagram-follow {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 9px 22px; background: var(--red); color: #fff;
+      font-family: var(--display);
+      font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      transition: background var(--t); white-space: nowrap;
+    }
+    .instagram-follow:hover { background: var(--red-dark); }
+    .instagram-follow svg { width: 14px; height: 14px; fill: currentColor; }
+    .instagram-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 6px;
+    }
+    .insta-item {
+      aspect-ratio: 1;
+      background: var(--light-gray);
+      overflow: hidden; position: relative;
+      display: block;
+    }
+    .insta-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .insta-item:hover img { transform: scale(1.05); }
+    .insta-placeholder {
+      width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; opacity: 0.15;
+    }
+    .instagram-cta {
+      text-align: center; margin-top: 28px;
+    }
+    .instagram-handle {
+      font-family: var(--display);
+      font-size: 0.78rem; font-weight: 300;
+      letter-spacing: 0.2em; color: var(--mid-gray);
+      margin-top: 8px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { display: none; }
+      .hamburger { display: flex; }
+      header { padding: 0 24px; }
+
+      /* ── Hero: モバイル縦積みレイアウト ── */
+      #hero { min-height: auto; padding: 96px 24px 52px; justify-content: flex-start; }
+      .hero-inner { flex-direction: column; align-items: center; gap: 8px; }
+      .hero-left { padding-bottom: 0; width: auto; }
+      .hero-spacer { display: none; }
+      /* 漢字: 横書き・小さめ */
+      .hero-kanji-vert { writing-mode: horizontal-tb; font-size: 1.3rem; letter-spacing: 0.3em; }
+      /* 名前ブロック: 上マージンでサークルが漢字に被らないようにする */
+      .hero-name-wrap { margin-top: 52px; }
+      .hero-circle { width: clamp(110px, 30vw, 180px); height: clamp(110px, 30vw, 180px); }
+      .hero-eng { font-size: clamp(2.4rem, 11vw, 5rem); }
+      /* JAPANESE ACTRESS: 余裕を持たせる */
+      .hero-sub { margin-top: 28px; letter-spacing: 0.2em; font-size: 0.72rem; }
+      /* SNS: アイコンのみ・コンパクト1行 */
+      .sns-label { display: none; }
+      .hero-sns { gap: 6px; flex-wrap: nowrap; justify-content: center; margin-top: 16px; }
+      .hero-sns a { padding: 9px; border-radius: 50%; gap: 0; }
+      .hero-sns a svg { width: 18px; height: 18px; }
+
+      /* ── Other sections ── */
+      .about-grid { grid-template-columns: 1fr; }
+      .about-photo { max-width: 240px; margin: 0 auto; }
+      .press-grid { grid-template-columns: 1fr; }
+      /* Works: 2行グリッドレイアウト (ヘッダー非表示) */
+      .works-table { display: block; }
+      .works-table thead { display: none; }
+      .works-table tbody { display: block; }
+      .works-table tr {
+        display: grid;
+        grid-template-columns: 44px 1fr auto;
+        column-gap: 8px; row-gap: 4px;
+        padding: 13px 0; border-bottom: 1px solid #f0f0f0;
+        align-items: start;
+      }
+      .works-table tr:hover { background: transparent; }
+      .works-table td { padding: 0; border: none; font-size: 0.82rem; vertical-align: top; }
+      .works-table .col-year {
+        grid-column: 1; grid-row: 1 / 3;
+        font-family: var(--display); font-weight: 300;
+        font-size: 0.74rem; color: var(--mid-gray);
+        white-space: nowrap; padding-top: 2px;
+      }
+      .works-table .col-title { grid-column: 2; grid-row: 1; }
+      .works-table .col-role { grid-column: 3; grid-row: 1; font-size: 0.79rem; color: var(--dark-gray); text-align: right; align-self: end; }
+      .works-table .col-venue { grid-column: 2; grid-row: 2; font-size: 0.74rem; color: var(--mid-gray); }
+      .works-table .col-dir { grid-column: 3; grid-row: 2; font-size: 0.74rem; color: var(--mid-gray); text-align: right; white-space: nowrap; }
+      /* 英語モード: td.lang-en をグリッドアイテムとして表示 */
+      body.show-en .works-table td.lang-en { display: block; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 540px) {
+      header { padding: 0 16px; }
+      .logo-nh { gap: 8px; }
+      .logo-nh-initial { width: 34px; height: 34px; font-size: 1.15rem; }
+      .logo-nh-name { font-size: 0.82rem; }
+      .logo-nh-sub { display: none; }
+      #hero { padding: 88px 16px 44px; }
+      .hero-eng { font-size: clamp(2.2rem, 12vw, 4rem); }
+      .hero-kanji-vert { font-size: 1.1rem; }
+      .hero-name-wrap { margin-top: 44px; }
+      section { padding: 56px 16px; }
+      .news-item { grid-template-columns: 1fr; gap: 4px; }
+      .about-stats { flex-wrap: wrap; gap: 16px; }
+      .works-tabs { gap: 0; }
+      .tab-btn { padding: 8px 10px; font-size: 0.63rem; }
+      .works-table .col-title { font-size: 0.8rem; }
+      .works-table .col-role { font-size: 0.76rem; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; gap: 5px; }
+      .instagram-grid { grid-template-columns: repeat(2, 1fr); }
+      .instagram-header { flex-direction: column; align-items: flex-start; gap: 14px; }
+      .section-header { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header>
+  <a href="#hero" class="logo-nh">
+    <div class="logo-nh-initial">NH</div>
+    <div class="logo-nh-text">
+      <span class="logo-nh-name lang-ja">橋本菜摘</span>
+      <span class="logo-nh-name lang-en">Natsumi Hashimoto</span>
+      <span class="logo-nh-sub lang-ja">公式ホームページ</span>
+      <span class="logo-nh-sub lang-en">Official Homepage</span>
+    </div>
+  </a>
+  <nav>
+    <a href="#news"    class="lang-ja">お知らせ</a>
+    <a href="#news"    class="lang-en">News</a>
+    <a href="#about"   class="lang-ja">プロフィール</a>
+    <a href="#about"   class="lang-en">About</a>
+    <a href="#works"    class="lang-ja">出演作</a>
+    <a href="#works"    class="lang-en">Works</a>
+    <a href="#training" class="lang-ja">研修歴</a>
+    <a href="#training" class="lang-en">Training</a>
+    <a href="#reel"     class="lang-ja">リール</a>
+    <a href="#reel"     class="lang-en">Reel</a>
+    <a href="#gallery"  class="lang-ja">ギャラリー</a>
+    <a href="#gallery"  class="lang-en">Gallery</a>
+    <a href="#press"    class="lang-ja">記事</a>
+    <a href="#press"    class="lang-en">Press</a>
+    <a href="#contact"  class="lang-ja">お問い合わせ</a>
+    <a href="#contact"  class="lang-en">Contact</a>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="ja" onclick="setLang('ja')">JP</button>
+      <button class="lang-btn"        data-lang="en" onclick="setLang('en')">EN</button>
+    </div>
+  </nav>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#news"    onclick="toggleMenu()"><span class="lang-ja">お知らせ</span><span class="lang-en">News</span></a>
+  <a href="#about"   onclick="toggleMenu()"><span class="lang-ja">プロフィール</span><span class="lang-en">About</span></a>
+  <a href="#works"    onclick="toggleMenu()"><span class="lang-ja">出演作</span><span class="lang-en">Works</span></a>
+  <a href="#training" onclick="toggleMenu()"><span class="lang-ja">研修歴</span><span class="lang-en">Training</span></a>
+  <a href="#reel"     onclick="toggleMenu()"><span class="lang-ja">リール</span><span class="lang-en">Reel</span></a>
+  <a href="#gallery"  onclick="toggleMenu()"><span class="lang-ja">ギャラリー</span><span class="lang-en">Gallery</span></a>
+  <a href="#press"    onclick="toggleMenu()"><span class="lang-ja">記事</span><span class="lang-en">Press</span></a>
+  <a href="#contact"  onclick="toggleMenu()"><span class="lang-ja">お問い合わせ</span><span class="lang-en">Contact</span></a>
+  <div class="lang-toggle">
+    <button class="lang-btn active" data-lang="ja" onclick="setLang('ja')">JP</button>
+    <button class="lang-btn"        data-lang="en" onclick="setLang('en')">EN</button>
+  </div>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-kanji-vert"><span class="red">橋</span>本<span class="red">菜</span>摘</div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-name-wrap">
+        <div class="hero-circle"></div>
+        <div class="hero-eng">NATSUMI</div>
+        <div class="hero-eng">HASHIMOTO</div>
+      </div>
+      <div class="hero-meta">
+
+        <div class="hero-sub">JAPANESE ACTRESS &nbsp;—&nbsp; TOKYO · NEW YORK</div>
+        <div class="hero-sns">
+          <a href="https://www.instagram.com/hashimoto723_/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <span class="sns-label">Instagram</span>
+          </a>
+          <a href="https://x.com/NatumiHashimoto" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <span class="sns-label">X / Twitter</span>
+          </a>
+          <a href="https://www.threads.net/@hashimoto723_" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-.509-1.924-1.45-3.405-2.794-4.405-1.243-.94-2.968-1.49-5.755-1.505h-.012c-3.035.028-5.321.997-6.793 2.878-1.428 1.826-2.163 4.437-2.189 7.762v.015c.026 3.327.76 5.94 2.187 7.766 1.471 1.88 3.756 2.848 6.789 2.877h.012c2.614-.027 4.383-.73 5.624-2.188.756-.9 1.262-2.07 1.505-3.481H12.19v-2.04h10.66l.024.6c.04 1.085-.163 2.6-.528 3.896-1.293 4.642-5.011 7.155-10.16 7.193zm6.495-12.04H18.7c-.063.43-.152.835-.27 1.206-.406 1.28-1.148 2.263-2.26 2.922-1.064.63-2.497.97-4.25.972-3.074-.028-5.394-.997-6.888-2.872-1.434-1.805-2.167-4.416-2.195-7.76v-.015c.028-3.346.762-5.959 2.195-7.765 1.494-1.875 3.815-2.844 6.893-2.871h.013c2.558.025 4.484.722 5.723 2.072.703.762 1.226 1.685 1.6 2.8l1.955-.546c-.484-1.471-1.21-2.72-2.2-3.72-.97-.98-2.16-1.73-3.57-2.243-1.386-.5-2.956-.76-4.697-.77h-.013c-3.357.03-5.94 1.16-7.643 3.28-1.65 2.056-2.5 4.93-2.527 8.506v.017c.027 3.574.878 6.448 2.527 8.505 1.703 2.12 4.286 3.25 7.644 3.28h.012c1.745-.024 3.312-.295 4.69-.81 1.41-.526 2.6-1.3 3.558-2.312.965-1.015 1.673-2.24 2.107-3.666.106-.348.195-.71.27-1.08z"/></svg>
+            <span class="sns-label">Threads</span>
+          </a>
+          <a href="https://www.tiktok.com/@natsumi.hashimoto" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.98a8.09 8.09 0 004.74 1.53V7.06a4.85 4.85 0 01-.97-.37z"/></svg>
+            <span class="sns-label">TikTok</span>
+          </a>
+          <a href="https://www.youtube.com/@Hashimoto723" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            <span class="sns-label">YouTube</span>
+          </a>
+          <a href="https://ameblo.jp/natsumihashimoto/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.374 0 12c0 6.627 5.374 12 12 12 6.627 0 12-5.373 12-12C24 5.374 18.627 0 12 0zm.5 17.5h-1v-6h1v6zm-.5-7.5a1 1 0 110-2 1 1 0 010 2z"/></svg>
+            <span class="sns-label">Ameblo</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-spacer" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- ═══ NEWS ═══ -->
+<section id="news" style="background:var(--white); padding-top: 44px;">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow lang-ja">最新情報</div>
+      <div class="section-eyebrow lang-en">Latest News</div>
+      <h2 class="section-title jp lang-ja">お知らせ</h2>
+      <h2 class="section-title lang-en">News</h2>
+      <div class="section-rule"></div>
+    </div>
+    <ul class="news-list">
+      <li class="news-item">
+        <span class="news-date">2025.11.20</span>
+        <span class="news-text lang-ja"><span class="news-tag">出演</span>大阪府立緑風冠高校、大東市立大東中学校にてゲスト講演を行いました。</span>
+        <span class="news-text lang-en"><span class="news-tag">Event</span>Guest lectures at Osaka Prefectural Ryokufukan High School and Daito Municipal Daito Junior High School.</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">2025.11.14</span>
+        <span class="news-text lang-ja"><span class="news-tag">登壇</span>俳優のための留学セミナー（渋谷・代々木）にて登壇しました。</span>
+        <span class="news-text lang-en"><span class="news-tag">Talk</span>Spoke at a study-abroad seminar for actors in Shibuya, Tokyo.</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">2025.10.08</span>
+        <span class="news-text lang-ja"><span class="news-tag">ライブ</span>主催音楽ライブ「REUNION LIVE」＠南青山MANDALA — 満員御礼でした！ありがとうございました。</span>
+        <span class="news-text lang-en"><span class="news-tag">Live</span>Self-produced concert "REUNION LIVE" at Aoyama MANDALA — Sold out! Thank you so much.</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">2025.08</span>
+        <span class="news-text lang-ja"><span class="news-tag">記事</span>Natalie（ステージ）に主催舞台の記事が掲載されました。<a href="https://natalie.mu/stage/news/636895" target="_blank" rel="noopener">→ 記事を読む</a></span>
+        <span class="news-text lang-en"><span class="news-tag">Press</span>Featured in Natalie (Stage News) for self-produced performance. <a href="https://natalie.mu/stage/news/636895" target="_blank" rel="noopener">→ Read Article</a></span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about" style="background:var(--off-white);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow lang-ja">プロフィール</div>
+      <div class="section-eyebrow lang-en">Profile</div>
+      <h2 class="section-title jp lang-ja">橋本菜摘について</h2>
+      <h2 class="section-title lang-en">About</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-photo">
+        <img src="images/profile.jpg" alt="橋本菜摘">
+      </div>
+      <div class="about-content">
+        <div class="about-name-ja lang-ja">橋本　菜摘</div>
+        <div class="about-name-en lang-en">Natsumi Hashimoto</div>
+        <div class="about-yomi lang-ja">はしもと なつみ</div>
+        <div class="about-yomi lang-en" style="font-size:0.78rem;letter-spacing:0.1em;color:#aaa;margin-bottom:20px;">Hashimoto Natsumi</div>
+        <div class="about-rule"></div>
+
+        <div class="about-stats">
+          <div class="stat-item lang-ja">
+            <span class="stat-label">生年月日</span>
+            <span class="stat-value">1993年2月24日</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label lang-ja">身長</span>
+            <span class="stat-label lang-en">Height</span>
+            <span class="stat-value lang-ja">144 cm</span>
+            <span class="stat-value lang-en">144 cm / 4'9"</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label lang-ja">出身</span>
+            <span class="stat-label lang-en">From</span>
+            <span class="stat-value lang-ja">大阪府</span>
+            <span class="stat-value lang-en">Osaka, Japan</span>
+          </div>
+        </div>
+
+        <p class="about-bio lang-ja">
+          大阪府大東市出身。劇団青年座所属。ハリー・ポッターと呪いの子（日本版）オリジナルキャストとして、TBS赤坂ACTシアターで2年間・647公演にわたりローズ・グレンジャー・ウィーズリー役を演じた。<br>
+          2024年、文化庁新進芸術家海外研修制度の奨学生に採択され、ニューヨークのHB Studioにて1年間の集中研修を修了。資金調達のために令和の虎にも出演。特技はアクロバット、英語、大阪弁、似顔絵、フルマラソンなど。
+        </p>
+        <p class="about-bio lang-en">
+          Actress from Daito, Osaka, affiliated with Seinenza Theatre Company.<br>
+          Best known for originating the role of Rose Granger-Weasley in the Japanese production of Harry Potter and the Cursed Child, performing 647 shows over two years at TBS Akasaka ACT Theater.<br>
+          Selected in 2024 for Japan's Agency for Cultural Affairs Overseas Fellowship, she completed one year of intensive training at HB Studio in New York. She also appeared on the YouTube program Reiwa no Tora to fund her journey. With skills in acrobatics, English, the Osaka dialect, portraiture, and marathon running.
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WORKS ═══ -->
+<section id="works" style="background:var(--white);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow lang-ja">出演作品</div>
+      <div class="section-eyebrow lang-en">Credits</div>
+      <h2 class="section-title jp lang-ja">作品</h2>
+      <h2 class="section-title lang-en">Works</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="works-tabs">
+      <button class="tab-btn active" onclick="showTab('theater', this)">
+        <span class="lang-ja">舞台</span><span class="lang-en">Theater</span>
+      </button>
+      <button class="tab-btn" onclick="showTab('video', this)">
+        <span class="lang-ja">映像</span><span class="lang-en">Screen</span>
+      </button>
+      <button class="tab-btn" onclick="showTab('radio', this)">
+        <span class="lang-ja">ラジオ</span><span class="lang-en">Radio</span>
+      </button>
+      <button class="tab-btn" onclick="showTab('live', this)">
+        <span class="lang-ja">ライブ</span><span class="lang-en">Live</span>
+      </button>
+      <button class="tab-btn" onclick="showTab('lecture', this)">
+        <span class="lang-ja">レクチャー</span><span class="lang-en">Lecture</span>
+      </button>
+      <button class="tab-btn" onclick="showTab('other', this)">
+        <span class="lang-ja">その他</span><span class="lang-en">Other</span>
+      </button>
+    </div>
+
+    <!-- THEATER -->
+    <div id="tab-theater" class="tab-panel active">
+      <table class="works-table">
+        <thead>
+          <tr style="border-bottom:2px solid #e8e8e8;">
+            <th style="padding:8px 10px;font-family:'Oswald',sans-serif;font-size:0.64rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--mid-gray);text-align:left;white-space:nowrap;" class="lang-ja">年</th>
+            <th style="padding:8px 10px;font-family:'Oswald',sans-serif;font-size:0.64rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--mid-gray);text-align:left;" class="lang-ja">主催・作品名</th>
+            <th style="padding:8px 10px;font-family:'Oswald',sans-serif;font-size:0.64rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--mid-gray);text-align:left;" class="lang-ja">役名</th>
+            <th style="padding:8px 10px;font-family:'Oswald',sans-serif;font-size:0.64rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--mid-gray);text-align:left;" class="lang-ja">劇場</th>
+            <th style="padding:8px 10px;font-family:'Oswald',sans-serif;font-size:0.64rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--mid-gray);text-align:left;" class="lang-ja">演出</th>
+            <th style="padding:8px 10px;font-family:'Oswald',sans-serif;font-size:0.64rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--mid-gray);text-align:left;white-space:nowrap;" class="lang-en">Year</th>
+            <th style="padding:8px 10px;font-family:'Oswald',sans-serif;font-size:0.64rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--mid-gray);text-align:left;" class="lang-en">Production / Title</th>
+            <th style="padding:8px 10px;font-family:'Oswald',sans-serif;font-size:0.64rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--mid-gray);text-align:left;" class="lang-en">Role</th>
+            <th style="padding:8px 10px;font-family:'Oswald',sans-serif;font-size:0.64rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--mid-gray);text-align:left;" class="lang-en">Venue</th>
+            <th style="padding:8px 10px;font-family:'Oswald',sans-serif;font-size:0.64rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--mid-gray);text-align:left;" class="lang-en">Director</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-year">2025</td>
+            <td class="col-title">
+              <span class="lang-ja"><span class="works-producer">HBスタジオ ショーケース</span>In grish</span>
+              <span class="lang-en"><span class="works-producer">HB Studio Showcase</span>In grish</span>
+            </td>
+            <td class="col-role lang-ja">Natsumi</td><td class="col-role lang-en">Natsumi</td>
+            <td class="col-venue">Hellen Gallagar Theater, New York</td>
+            <td class="col-dir lang-ja">作・演出：橋本菜摘</td><td class="col-dir lang-en">Written &amp; Dir. Natsumi Hashimoto</td>
+          </tr>
+          <tr>
+            <td class="col-year">22–24</td>
+            <td class="col-title">
+              <span class="lang-ja"><span class="works-producer">ホリプロ・TBS・ATG</span><strong>ハリー・ポッターと呪いの子</strong></span>
+              <span class="lang-en"><span class="works-producer">Horipro / TBS / ATG</span><strong>Harry Potter and the Cursed Child</strong></span>
+            </td>
+            <td class="col-role lang-ja">ローズ・グレンジャー・ウィーズリー</td>
+            <td class="col-role lang-en">Rose Granger-Weasley</td>
+            <td class="col-venue lang-ja">TBS赤坂ACTシアター</td>
+            <td class="col-venue lang-en">TBS Akasaka ACT Theater, Tokyo</td>
+            <td class="col-dir lang-ja">演出：ジョン・ティファニー</td><td class="col-dir lang-en">Dir. John Tiffany</td>
+          </tr>
+          <tr>
+            <td class="col-year">2024</td>
+            <td class="col-title">
+              <span class="lang-ja"><span class="works-producer">Karent.</span>朗読劇 10年後の君へ</span>
+              <span class="lang-en"><span class="works-producer">Karent.</span>10 Years Later, to You (Reading Theatre)</span>
+            </td>
+            <td class="col-role lang-ja">高橋彩</td><td class="col-role lang-en">Aya Takahashi</td>
+            <td class="col-venue lang-ja">アトリエファンファーレ高円寺 他</td><td class="col-venue lang-en">Atelier Fanfare Koenji, Tokyo + Tour</td>
+            <td class="col-dir lang-ja">作・演出：岩田華怜</td><td class="col-dir lang-en">Written &amp; Dir. Karen Iwata</td>
+          </tr>
+          <tr>
+            <td class="col-year">2024</td>
+            <td class="col-title">
+              <span class="lang-ja"><span class="works-producer">かわいいコンビニ店員飯田さん</span>空腹</span>
+              <span class="lang-en"><span class="works-producer">Kawaii Convenience Store Clerk Iida-san</span>Kuhuku (Hunger)</span>
+            </td>
+            <td class="col-role lang-ja">倉下幸</td><td class="col-role lang-en">Sachi Kurashita</td>
+            <td class="col-venue lang-ja">OFF･OFFシアター</td><td class="col-venue lang-en">OFF･OFF Theatre, Tokyo</td>
+            <td class="col-dir lang-ja">作・演出：池内風</td><td class="col-dir lang-en">Written &amp; Dir. Fuu Ikeuchi</td>
+          </tr>
+          <tr>
+            <td class="col-year">2024</td>
+            <td class="col-title">
+              <span class="lang-ja"><span class="works-producer">ENG</span>missing〜ドラゴンズ・バックへの歩調〜</span>
+              <span class="lang-en"><span class="works-producer">ENG</span>missing – Steps Toward the Dragons' Back</span>
+            </td>
+            <td class="col-role lang-ja">江東梨央奈</td><td class="col-role lang-en">Erina Koto</td>
+            <td class="col-venue lang-ja">六行会ホール</td><td class="col-venue lang-en">Rikkokai Hall, Tokyo</td>
+            <td class="col-dir lang-ja">作・演出：福地慎太郎</td><td class="col-dir lang-en">Written &amp; Dir. Shintarou Fukuchi</td>
+          </tr>
+          <tr>
+            <td class="col-year">2022</td>
+            <td class="col-title">
+              <span class="lang-ja"><span class="works-producer">DMM</span>炎炎ノ消防隊（第2弾）</span>
+              <span class="lang-en"><span class="works-producer">DMM</span>Fire Force Stage Play (2nd)</span>
+            </td>
+            <td class="col-role lang-ja">ヒナタ</td><td class="col-role lang-en">Hinata</td>
+            <td class="col-venue">KT Zepp Yokohama, Kanagawa</td>
+            <td class="col-dir lang-ja">演出：久保田唱</td><td class="col-dir lang-en">Dir. Sho Kubota</td>
+          </tr>
+          <tr>
+            <td class="col-year">2020</td>
+            <td class="col-title">
+              <span class="lang-ja"><span class="works-producer">PARCO</span>MODERN BOYS</span>
+              <span class="lang-en"><span class="works-producer">PARCO</span>MODERN BOYS</span>
+            </td>
+            <td class="col-role lang-ja">カナ</td><td class="col-role lang-en">Kana</td>
+            <td class="col-venue lang-ja">新国立劇場 中劇場</td><td class="col-venue lang-en">New National Theatre Playhouse, Tokyo</td>
+            <td class="col-dir lang-ja">演出：一色隆司</td><td class="col-dir lang-en">Dir. Takashi Isshiki</td>
+          </tr>
+          <tr>
+            <td class="col-year">2020</td>
+            <td class="col-title">
+              <span class="lang-ja"><span class="works-producer">青年座</span>横濱短篇ホテル</span>
+              <span class="lang-en"><span class="works-producer">Seinenza Theatre Company</span>Yokohama Tanpen Hotel</span>
+            </td>
+            <td class="col-role lang-ja">カオリ</td><td class="col-role lang-en">Kaori</td>
+            <td class="col-venue lang-ja">中部・北陸地方演劇鑑賞会ツアー</td><td class="col-venue lang-en">Chubu–Hokuriku Regional Theatre Tour</td>
+            <td class="col-dir lang-ja">演出：宮田慶子</td><td class="col-dir lang-en">Dir. Keiko Miyata</td>
+          </tr>
+          <tr>
+            <td class="col-year">2020</td>
+            <td class="col-title">
+              <span class="lang-ja"><span class="works-producer">青年座</span>ブルーストッキングの女たち</span>
+              <span class="lang-en"><span class="works-producer">Seinenza Theatre Company</span>Bluestocking no Onna Tachi</span>
+            </td>
+            <td class="col-role lang-ja">魔子、女中、一</td><td class="col-role lang-en">Mako, Made, Makoto</td>
+            <td class="col-venue lang-ja">東京芸術劇場シアターウエスト</td><td class="col-venue lang-en">Tokyo Metropolitan Theatre West, Tokyo</td>
+            <td class="col-dir lang-ja">演出：齋藤理恵子</td><td class="col-dir lang-en">Dir. Rieko Saito</td>
+          </tr>
+          <tr>
+            <td class="col-year">2020</td>
+            <td class="col-title">
+              <span class="lang-ja"><span class="works-producer">青年座</span>ありがとサンキュー！</span>
+              <span class="lang-en"><span class="works-producer">Seinenza Theatre Company</span>Arigato Thank you!</span>
+            </td>
+            <td class="col-role lang-ja">坂田美穂</td><td class="col-role lang-en">Miho Sakata</td>
+            <td class="col-venue">BIG TREE THEATER, Tokyo</td>
+            <td class="col-dir lang-ja">演出：磯村純</td><td class="col-dir lang-en">Dir. Jun Isomura</td>
+          </tr>
+          <tr>
+            <td class="col-year">2020</td>
+            <td class="col-title">
+              <span class="lang-ja"><span class="works-producer">DMM</span>炎炎ノ消防隊（初演）</span>
+              <span class="lang-en"><span class="works-producer">DMM</span>Fire Force Stage Play (1st)</span>
+            </td>
+            <td class="col-role lang-ja">アンサンブル</td><td class="col-role lang-en">Ensemble</td>
+            <td class="col-venue lang-ja">KT Zepp Yokohama、梅田芸術劇場シアタードラマシティ</td><td class="col-venue lang-en">KT Zepp Yokohama + Umeda Arts Theatre Drama City, Osaka</td>
+            <td class="col-dir lang-ja">演出：久保田唱</td><td class="col-dir lang-en">Dir. Sho Kubota</td>
+          </tr>
+          <tr>
+            <td class="col-year">2019</td>
+            <td class="col-title">
+              <span class="lang-ja"><span class="works-producer">ホリプロ</span>奇跡の人</span>
+              <span class="lang-en"><span class="works-producer">Horipro</span>The Miracle Worker</span>
+            </td>
+            <td class="col-role lang-ja">マーサ</td><td class="col-role lang-en">Martha</td>
+            <td class="col-venue lang-ja">東京芸術劇場プレイハウス、梅田芸術劇場シアタードラマシティ 他</td><td class="col-venue lang-en">Tokyo Metropolitan Theatre, Tokyo + Umeda Arts Theater Drama City, Osaka + Tour</td>
+            <td class="col-dir lang-ja">演出：森新太郎</td><td class="col-dir lang-en">Dir. Shintaro Mori</td>
+          </tr>
+          <tr>
+            <td class="col-year">2019</td>
+            <td class="col-title"><span class="lang-ja">春雪</span><span class="lang-en">Chunxue (Spring Snow)</span></td>
+            <td class="col-role lang-ja">ヤオ・モンチー</td><td class="col-role lang-en">Yao Mengqi</td>
+            <td class="col-venue lang-ja">シアター風姿花伝</td><td class="col-venue lang-en">Theatre Fuushikaden, Tokyo</td>
+            <td class="col-dir lang-ja">演出：山口篤</td><td class="col-dir lang-en">Dir. Atsushi Yamaguchi</td>
+          </tr>
+          <tr>
+            <td class="col-year">2018</td>
+            <td class="col-title">
+              <span class="lang-ja"><span class="works-producer">青年座</span>安楽病棟</span>
+              <span class="lang-en"><span class="works-producer">Seinenza Theatre Company</span>Anraku Byoto</span>
+            </td>
+            <td class="col-role lang-ja">理恵</td><td class="col-role lang-en">Rie</td>
+            <td class="col-venue lang-ja">本多劇場</td><td class="col-venue lang-en">Honda Theater, Tokyo</td>
+            <td class="col-dir lang-ja">演出：磯村純</td><td class="col-dir lang-en">Dir. Jun Isomura</td>
+          </tr>
+          <tr>
+            <td class="col-year">2018</td>
+            <td class="col-title">
+              <span class="lang-ja"><span class="works-producer">国東演劇講座</span>遥かなる海の讃美歌</span>
+              <span class="lang-en"><span class="works-producer">Kunisaki Drama Workshop</span>Hymn of the Distant Sea</span>
+            </td>
+            <td class="col-role lang-ja">ジョアン岐部</td><td class="col-role lang-en">Joan Kibe</td>
+            <td class="col-venue lang-ja">くにさきアストホール</td><td class="col-venue lang-en">Kunisaki Ast Hall, Oita</td>
+            <td class="col-dir lang-ja">演出：磯村純</td><td class="col-dir lang-en">Dir. Jun Isomura</td>
+          </tr>
+          <tr>
+            <td class="col-year">2017</td>
+            <td class="col-title">
+              <span class="lang-ja"><span class="works-producer">青年座</span>ブンナよ、木からおりてこい</span>
+              <span class="lang-en"><span class="works-producer">Seinenza Theatre Company</span>Bunna, Come Down from the Tree</span>
+            </td>
+            <td class="col-role lang-ja">子ガエルB</td><td class="col-role lang-en">Baby Frog B</td>
+            <td class="col-venue lang-ja">新国立劇場小劇場、中国地方演劇鑑賞会ツアー</td><td class="col-venue lang-en">New National Theatre The Pit, Tokyo + Chugoku Region Theatre Tour</td>
+            <td class="col-dir lang-ja">演出：磯村純</td><td class="col-dir lang-en">Dir. Jun Isomura</td>
+          </tr>
+          <tr>
+            <td class="col-year">2017</td>
+            <td class="col-title">
+              <span class="lang-ja"><span class="works-producer">青年座研究所</span>明日 ——長崎・1945年8月9日——</span>
+              <span class="lang-en"><span class="works-producer">Seinenza Theater</span>Tomorrow — Nagasaki, August 9, 1945</span>
+            </td>
+            <td class="col-role lang-ja">ツル子</td><td class="col-role lang-en">Tsuruko</td>
+            <td class="col-venue lang-ja">青年座研究所 卒業公演</td><td class="col-venue lang-en">Seinenza Theater, Tokyo</td>
+            <td class="col-dir lang-ja">演出：須藤黄英</td><td class="col-dir lang-en">Dir. Kie Sudo</td>
+          </tr>
+          <tr>
+            <td class="col-year">2016</td>
+            <td class="col-title">
+              <span class="lang-ja"><span class="works-producer">青年座研究所</span>わが町</span>
+              <span class="lang-en"><span class="works-producer">Seinenza Theater</span>Our Town</span>
+            </td>
+            <td class="col-role lang-ja">エミリー</td><td class="col-role lang-en">Emily</td>
+            <td class="col-venue lang-ja">青年座研究所 研修公演</td><td class="col-venue lang-en">Seinenza Theater, Tokyo</td>
+            <td class="col-dir lang-ja">演出：須藤黄英</td><td class="col-dir lang-en">Dir. Kie Sudo</td>
+          </tr>
+          <tr>
+            <td class="col-year">2016</td>
+            <td class="col-title">
+              <span class="lang-ja"><span class="works-producer">青年座研究所</span>月の岬</span>
+              <span class="lang-en"><span class="works-producer">Seinenza Theater</span>The Cape of the Moon</span>
+            </td>
+            <td class="col-role lang-ja">大浦和美</td><td class="col-role lang-en">Kazumi Oura</td>
+            <td class="col-venue lang-ja">青年座研究所 研修公演</td><td class="col-venue lang-en">Seinenza Theater, Tokyo</td>
+            <td class="col-dir lang-ja">演出：齋藤理恵子</td><td class="col-dir lang-en">Dir. Rieko Saito</td>
+          </tr>
+          <tr>
+            <td class="col-year">2016</td>
+            <td class="col-title">
+              <span class="lang-ja"><span class="works-producer">青年座研究所</span>第三の証言</span>
+              <span class="lang-en"><span class="works-producer">Seinenza Theater</span>The Third Testimony</span>
+            </td>
+            <td class="col-role lang-ja">行田敏子</td><td class="col-role lang-en">Toshiko Gyoda</td>
+            <td class="col-venue lang-ja">青年座研究所 研修公演</td><td class="col-venue lang-en">Seinenza Theater, Tokyo</td>
+            <td class="col-dir lang-ja">演出：黒岩亮</td><td class="col-dir lang-en">Dir. Makoto Kuroiwa</td>
+          </tr>
+          <tr>
+            <td class="col-year">2014</td>
+            <td class="col-title">
+              <span class="lang-ja"><span class="works-producer">チョコレイト旅団</span>宇宙の旅、セミが鳴いて</span>
+              <span class="lang-en"><span class="works-producer">Chocolate Ryodan</span>The Journey Through Space, While the Cicadas Cry</span>
+            </td>
+            <td class="col-role lang-ja">荒川雪恵</td><td class="col-role lang-en">Yukie Arakawa</td>
+            <td class="col-venue lang-ja">中野MOMO</td><td class="col-venue lang-en">Nakano Theatre MOMO, Tokyo</td>
+            <td class="col-dir lang-ja">演出：浮谷泰史</td><td class="col-dir lang-en">Dir. Taishi Ukiya</td>
+          </tr>
+          <tr>
+            <td class="col-year">2013</td>
+            <td class="col-title">
+              <span class="lang-ja"><span class="works-producer">専門学校卒業公演</span>僕の東京日記</span>
+              <span class="lang-en"><span class="works-producer">Vocational School Graduation Production</span>My Tokyo Diary</span>
+            </td>
+            <td class="col-role lang-ja">土橋郁代</td><td class="col-role lang-en">Ikuyo Dobashi</td>
+            <td class="col-venue lang-ja">ビジュアルアーツ大阪</td><td class="col-venue lang-en">Visual Arts College, Osaka</td>
+            <td class="col-dir lang-ja">演出：谷広子</td><td class="col-dir lang-en">Dir. Hiroko Tani</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 映像 -->
+    <div id="tab-video" class="tab-panel">
+      <table class="works-table">
+        <tbody>
+          <tr>
+            <td class="col-year" colspan="5" style="padding-top:10px;padding-bottom:6px;">
+              <span style="font-family:'Oswald',sans-serif;font-size:0.68rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#C8102E;">
+                <span class="lang-ja">テレビ</span><span class="lang-en">Television</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="col-year">2021</td>
+            <td class="col-title"><span class="lang-ja">理想的本箱</span><span class="lang-en">Ideal Bookcase</span></td>
+            <td class="col-role lang-ja">馬堀</td><td class="col-role lang-en">Umahori</td>
+            <td class="col-venue lang-ja">NHK Eテレ</td><td class="col-venue lang-en">NHK E-Tele</td>
+          </tr>
+          <tr>
+            <td class="col-year">2020</td>
+            <td class="col-title"><span class="lang-ja">ら〜めん西遊記</span><span class="lang-en">Ramen Saiyuki</span></td>
+            <td class="col-role lang-ja">料理教室の生徒</td><td class="col-role lang-en">Cooking School Student</td>
+            <td class="col-venue lang-ja">テレビ東京</td><td class="col-venue lang-en">TV Tokyo</td>
+          </tr>
+          <tr>
+            <td class="col-year">2019</td>
+            <td class="col-title"><span class="lang-ja">モンローが死んだ日</span><span class="lang-en">The Day Monroe Died</span></td>
+            <td class="col-role lang-ja">劇団員</td><td class="col-role lang-en">Theatre Company Member</td>
+            <td class="col-venue lang-ja">NHK BSプレミアム</td><td class="col-venue lang-en">NHK BS Premium</td>
+          </tr>
+          <tr>
+            <td class="col-year" colspan="5" style="padding-top:22px;padding-bottom:6px;">
+              <span style="font-family:'Oswald',sans-serif;font-size:0.68rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#C8102E;">
+                <span class="lang-ja">映画</span><span class="lang-en">Film</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="col-year">2021</td>
+            <td class="col-title"><span class="lang-ja">Muddy date（短編映画）</span><span class="lang-en">Muddy date (Short Film)</span></td>
+            <td class="col-role lang-ja">ひろみ</td><td class="col-role lang-en">Hiromi</td>
+            <td class="col-venue lang-ja"></td><td class="col-venue lang-en"></td>
+            <td class="col-dir lang-ja">監督：丸山智</td><td class="col-dir lang-en">Dir. Satoshi Maruyama</td>
+          </tr>
+          <tr>
+            <td class="col-year" colspan="5" style="padding-top:22px;padding-bottom:6px;">
+              <span style="font-family:'Oswald',sans-serif;font-size:0.68rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#C8102E;">
+                <span class="lang-ja">配信演劇</span><span class="lang-en">Streaming Theatre</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="col-year">2021</td>
+            <td class="col-title"><span class="lang-ja">初恋は消耗品</span><span class="lang-en">First Love is Disposable</span></td>
+            <td class="col-role lang-ja">優菜</td><td class="col-role lang-en">Yuna</td>
+            <td class="col-venue lang-ja">配信</td><td class="col-venue lang-en">Streaming</td>
+            <td class="col-dir lang-ja"></td><td class="col-dir lang-en"></td>
+          </tr>
+          <tr>
+            <td class="col-year">2021</td>
+            <td class="col-title"><span class="lang-ja">あたしら葉桜</span><span class="lang-en">Atashira Hazakura</span></td>
+            <td class="col-role lang-ja">娘</td><td class="col-role lang-en">Daughter</td>
+            <td class="col-venue lang-ja">配信</td><td class="col-venue lang-en">Streaming</td>
+            <td class="col-dir lang-ja"></td><td class="col-dir lang-en"></td>
+          </tr>
+          <tr>
+            <td class="col-year">2020</td>
+            <td class="col-title"><span class="lang-ja">Mio Pardre</span><span class="lang-en">Mio Pardre</span></td>
+            <td class="col-role lang-ja">女</td><td class="col-role lang-en">Woman</td>
+            <td class="col-venue lang-ja">配信</td><td class="col-venue lang-en">Streaming</td>
+            <td class="col-dir lang-ja"></td><td class="col-dir lang-en"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ラジオ -->
+    <div id="tab-radio" class="tab-panel">
+      <table class="works-table">
+        <tbody>
+          <tr>
+            <td class="col-year"></td>
+            <td class="col-title"><span class="lang-ja">青春アドベンチャー「篠村兄弟の恩寵」</span><span class="lang-en">Youth Adventure: The Grace of the Shinomura Brothers</span></td>
+            <td class="col-role lang-ja"></td><td class="col-role lang-en"></td>
+            <td class="col-venue">NHK FM</td>
+          </tr>
+          <tr>
+            <td class="col-year"></td>
+            <td class="col-title"><span class="lang-ja">ミサトーナイト！</span><span class="lang-en">Misato Night!</span></td>
+            <td class="col-role lang-ja"></td><td class="col-role lang-en"></td>
+            <td class="col-venue lang-ja">レインボータウンFM</td><td class="col-venue lang-en">Rainbow Town FM</td>
+          </tr>
+          <tr>
+            <td class="col-year"></td>
+            <td class="col-title"><span class="lang-ja">ちょいとお耳を拝借</span><span class="lang-en">Choito Omimi wo Haishaku</span></td>
+            <td class="col-role lang-ja"></td><td class="col-role lang-en"></td>
+            <td class="col-venue">stand.fm</td>
+          </tr>
+          <tr>
+            <td class="col-year"></td>
+            <td class="col-title"><span class="lang-ja">佐藤玲のぶぶ部ラジオ</span><span class="lang-en">Sato Rei's Bubu Radio</span></td>
+            <td class="col-role lang-ja"></td><td class="col-role lang-en"></td>
+            <td class="col-venue lang-ja">ポッドキャスト</td><td class="col-venue lang-en">Podcast</td>
+          </tr>
+          <tr>
+            <td class="col-year"></td>
+            <td class="col-title"><span class="lang-ja">底んトコ知り隊</span><span class="lang-en">Sokon Toko Shiri-tai</span></td>
+            <td class="col-role lang-ja"></td><td class="col-role lang-en"></td>
+            <td class="col-venue lang-ja">ラジオフチューズ</td><td class="col-venue lang-en">Radio Fuchus</td>
+          </tr>
+          <tr>
+            <td class="col-year"></td>
+            <td class="col-title"><span class="lang-ja">はなきっちゃんねる</span><span class="lang-en">Hanakitsu Channel</span></td>
+            <td class="col-role lang-ja"></td><td class="col-role lang-en"></td>
+            <td class="col-venue lang-ja">ラジオフチューズ</td><td class="col-venue lang-en">Radio Fuchus</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ライブ -->
+    <div id="tab-live" class="tab-panel">
+      <table class="works-table">
+        <tbody>
+          <tr>
+            <td class="col-year">2025</td>
+            <td class="col-title"><span class="lang-ja">橋本菜摘主催 REUNION LIVE</span><span class="lang-en">REUNION LIVE — Self-produced by Natsumi Hashimoto</span></td>
+            <td class="col-role lang-ja"></td><td class="col-role lang-en"></td>
+            <td class="col-venue lang-ja">南青山MANDALA</td><td class="col-venue lang-en">Minami-Aoyama MANDALA, Tokyo</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- レクチャー -->
+    <div id="tab-lecture" class="tab-panel">
+      <table class="works-table">
+        <tbody>
+          <tr>
+            <td class="col-year">2025</td>
+            <td class="col-title"><span class="lang-ja">大阪ビジュアルアーツアカデミー</span><span class="lang-en">Osaka Visual Arts Academy</span></td>
+            <td class="col-role lang-ja">特別授業講師</td><td class="col-role lang-en">Guest Lecturer</td>
+            <td class="col-venue lang-ja"></td><td class="col-venue lang-en"></td>
+          </tr>
+          <tr>
+            <td class="col-year">2025</td>
+            <td class="col-title"><span class="lang-ja">演劇留学体験談セミナー</span><span class="lang-en">Seminar: Study Abroad Experience in Theatre</span></td>
+            <td class="col-role lang-ja">講師</td><td class="col-role lang-en">Lecturer</td>
+            <td class="col-venue lang-ja">東京・代々木</td><td class="col-venue lang-en">Yoyogi, Tokyo</td>
+          </tr>
+          <tr>
+            <td class="col-year">2025</td>
+            <td class="col-title"><span class="lang-ja">大阪府立緑風冠高校</span><span class="lang-en">Osaka Prefectural Ryokufukan High School</span></td>
+            <td class="col-role lang-ja">ゲスト演説</td><td class="col-role lang-en">Guest Speaker</td>
+            <td class="col-venue lang-ja"></td><td class="col-venue lang-en"></td>
+          </tr>
+          <tr>
+            <td class="col-year">2025</td>
+            <td class="col-title"><span class="lang-ja">大東市立大東中学校</span><span class="lang-en">Daito Municipal Daito Junior High School</span></td>
+            <td class="col-role lang-ja">ゲスト演説</td><td class="col-role lang-en">Guest Speaker</td>
+            <td class="col-venue lang-ja"></td><td class="col-venue lang-en"></td>
+          </tr>
+          <tr>
+            <td class="col-year">2024</td>
+            <td class="col-title"><span class="lang-ja">大阪ビジュアルアーツアカデミー</span><span class="lang-en">Osaka Visual Arts Academy</span></td>
+            <td class="col-role lang-ja">特別授業講師</td><td class="col-role lang-en">Guest Lecturer</td>
+            <td class="col-venue lang-ja"></td><td class="col-venue lang-en"></td>
+          </tr>
+          <tr>
+            <td class="col-year">2022</td>
+            <td class="col-title"><span class="lang-ja">大阪ビジュアルアーツアカデミー</span><span class="lang-en">Osaka Visual Arts Academy</span></td>
+            <td class="col-role lang-ja">特別授業講師</td><td class="col-role lang-en">Guest Lecturer</td>
+            <td class="col-venue lang-ja"></td><td class="col-venue lang-en"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- その他 -->
+    <div id="tab-other" class="tab-panel">
+      <table class="works-table">
+        <tbody>
+          <!-- ステージ -->
+          <tr>
+            <td colspan="6" style="padding-top:10px;padding-bottom:6px;">
+              <span style="font-family:'Oswald',sans-serif;font-size:0.68rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#C8102E;">
+                <span class="lang-ja">ステージ</span><span class="lang-en">Stage</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="col-year">2025</td>
+            <td class="col-title"><span class="lang-ja">忍翔主催インプロショー</span><span class="lang-en">Impro Show hosted by Sho Shinobu</span></td>
+            <td class="col-role lang-ja">出演</td><td class="col-role lang-en">Performer</td>
+            <td class="col-venue lang-ja"></td><td class="col-venue lang-en"></td>
+          </tr>
+          <!-- イベント -->
+          <tr>
+            <td colspan="6" style="padding-top:22px;padding-bottom:6px;">
+              <span style="font-family:'Oswald',sans-serif;font-size:0.68rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#C8102E;">
+                <span class="lang-ja">イベント</span><span class="lang-en">Events</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="col-year">2024</td>
+            <td class="col-title"><span class="lang-ja">橋本菜摘ファンミーティング</span><span class="lang-en">Natsumi Hashimoto Fan Meeting</span></td>
+            <td class="col-role lang-ja">主催</td><td class="col-role lang-en">Organizer</td>
+            <td class="col-venue lang-ja">東京・渋谷</td><td class="col-venue lang-en">Shibuya, Tokyo</td>
+          </tr>
+          <!-- 特技 -->
+          <tr>
+            <td colspan="6" style="padding-top:22px;padding-bottom:6px;">
+              <span style="font-family:'Oswald',sans-serif;font-size:0.68rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#C8102E;">
+                <span class="lang-ja">特技</span><span class="lang-en">Special Skills</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="col-year">—</td>
+            <td class="col-title"><span class="lang-ja">大阪弁 方言指導</span><span class="lang-en">Osaka Dialect Coaching</span></td>
+            <td class="col-role lang-ja">指導実績多数</td><td class="col-role lang-en">Numerous credits</td>
+            <td class="col-venue lang-ja"></td><td class="col-venue lang-en"></td>
+          </tr>
+          <tr>
+            <td class="col-year">2020</td>
+            <td class="col-title"><span class="lang-ja">フルマラソン完走</span><span class="lang-en">Full Marathon — Finisher</span></td>
+            <td class="col-role lang-ja">4時間40分</td><td class="col-role lang-en">4h 40min</td>
+            <td class="col-venue lang-ja"></td><td class="col-venue lang-en"></td>
+          </tr>
+          <!-- 演出助手 -->
+          <tr>
+            <td colspan="6" style="padding-top:22px;padding-bottom:6px;">
+              <span style="font-family:'Oswald',sans-serif;font-size:0.68rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#C8102E;">
+                <span class="lang-ja">演出助手</span><span class="lang-en">Assistant Director</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="col-year">2021</td>
+            <td class="col-title">
+              <span class="lang-ja"><span class="works-producer">青年座</span>シェアの法則</span>
+              <span class="lang-en"><span class="works-producer">Seinenza Theatre Company</span>The Law of Sharing</span>
+            </td>
+            <td class="col-role lang-ja">演出助手</td><td class="col-role lang-en">Assistant Director</td>
+            <td class="col-venue lang-ja">中野ザ・ポケット</td><td class="col-venue lang-en">Nakano The Pocket, Tokyo</td>
+            <td class="col-dir lang-ja">演出：須藤黄英</td><td class="col-dir lang-en">Dir. Kie Sudo</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- TRAINING -->
+  </div>
+</section>
+
+<!-- ═══ TRAINING ═══ -->
+<section id="training" style="background:var(--off-white);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow lang-ja">研修・留学歴</div>
+      <div class="section-eyebrow lang-en">Training</div>
+      <h2 class="section-title lang-ja">研修歴</h2>
+      <h2 class="section-title lang-en">Training</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="training-list">
+      <div class="training-item">
+        <div class="training-school">HB Studio — New York, USA</div>
+        <div class="training-detail lang-ja">2024–2025｜令和6年度文化庁新進芸術家海外研修制度にて、一年間演劇留学。</div>
+        <div class="training-detail lang-en">2024–2025 | Agency for Cultural Affairs Overseas Study Fellowship. One year of intensive theatre training in New York.</div>
+      </div>
+      <div class="training-item">
+        <div class="training-school lang-ja">劇団青年座研究所 — 東京</div>
+        <div class="training-school lang-en">Seinenza Theatre Laboratory — Tokyo</div>
+        <div class="training-detail lang-ja">2015–2017｜41期生。本科、実習科を経て劇団員に。</div>
+        <div class="training-detail lang-en">2015–2017 | 41st cohort. Advanced through main and practicum courses; one of only 3 promoted to full company member from a 45-student cohort.</div>
+      </div>
+      <div class="training-item">
+        <div class="training-school lang-ja">スクールデュオ15期 — 東京</div>
+        <div class="training-school lang-en">Kenproduction School Duo (15th cohort) — Tokyo</div>
+        <div class="training-detail lang-ja">2013–2014｜賢プロダクション附属養成所の15期生。</div>
+        <div class="training-detail lang-en">2013–2014 | Performance training affiliated with Ken Production. Selected as one of ~50 students from over 1,000 applicants.</div>
+      </div>
+      <div class="training-item">
+        <div class="training-school lang-ja">大阪ビジュアルアーツアカデミー — 大阪</div>
+        <div class="training-school lang-en">Osaka Visual Arts Academy — Osaka</div>
+        <div class="training-detail lang-ja">2011–2013｜声優課程を修了。卒業時に大阪府知事賞受賞。</div>
+        <div class="training-detail lang-en">2011–2013 | Two-year voice acting program. Received Osaka Governor's Award upon graduation.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ REEL ═══ -->
+<section id="reel">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Showreel</div>
+      <h2 class="section-title lang-ja">リール</h2>
+      <h2 class="section-title lang-en">Reel</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="reel-content">
+      <p class="reel-text lang-ja">舞台・映像作品をまとめたリールを更新予定です。</p>
+      <p class="reel-text lang-en">Showreel — stage and screen work. Coming soon.</p>
+      <a href="https://www.youtube.com/@Hashimoto723" target="_blank" rel="noopener" class="reel-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        <span class="lang-ja">YouTubeで見る</span>
+        <span class="lang-en">Watch on YouTube</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRESS ═══ -->
+<section id="press" style="background:var(--off-white);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow lang-ja">メディア掲載</div>
+      <div class="section-eyebrow lang-en">Press</div>
+      <h2 class="section-title jp lang-ja">記事・インタビュー</h2>
+      <h2 class="section-title lang-en">Press &amp; Media</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="press-grid">
+      <a href="https://mainichi.jp/articles/20241227/k00/00m/040/262000c" target="_blank" rel="noopener" class="press-card">
+        <div class="press-source">毎日新聞 / Mainichi Shimbun</div>
+        <div class="press-date">2024.12.27</div>
+        <div class="press-title lang-ja">特集記事掲載（全国紙・紙面＆オンライン）</div>
+        <div class="press-title lang-en">National Newspaper Feature (Print &amp; Online)</div>
+        <p class="press-desc lang-ja">演劇への道のり、ハリー・ポッターでの経験、NY留学、若い世代へのメッセージ。</p>
+        <p class="press-desc lang-en">Her path to acting, Harry Potter experience, NY training, and message for the next generation.</p>
+        <span class="press-link"><span class="lang-ja">記事を読む</span><span class="lang-en">Read Article</span> →</span>
+      </a>
+      <a href="https://studio.persol-group.co.jp/nama/241112-1" target="_blank" rel="noopener" class="press-card">
+        <div class="press-source">Studio Persol</div>
+        <div class="press-date">2024.11.12</div>
+        <div class="press-title lang-ja">インタビュー掲載</div>
+        <div class="press-title lang-en">Feature Interview</div>
+        <p class="press-desc lang-ja">NY訓練の挑戦、言語の壁、国境を超えた俳優としてのビジョン。</p>
+        <p class="press-desc lang-en">Challenges training in New York, language barriers, and her vision as a cross-cultural performer.</p>
+        <span class="press-link"><span class="lang-ja">記事を読む</span><span class="lang-en">Read Article</span> →</span>
+      </a>
+      <a href="https://natalie.mu/stage/news/636895" target="_blank" rel="noopener" class="press-card">
+        <div class="press-source">Natalie（ステージ）</div>
+        <div class="press-date">2025.08.20</div>
+        <div class="press-title lang-ja">主催舞台 特集記事</div>
+        <div class="press-title lang-en">Self-Produced Stage Performance — Feature</div>
+        <p class="press-desc lang-ja">演劇界で著名なエンタメニュースサイトNatalieに、自主制作公演が掲載されました。</p>
+        <p class="press-desc lang-en">Coverage by Natalie, one of Japan's most-read entertainment news platforms.</p>
+        <span class="press-link"><span class="lang-ja">記事を読む</span><span class="lang-en">Read Article</span> →</span>
+      </a>
+      <div class="press-card" style="cursor:default;">
+        <div class="press-source">日経エンタテインメント！/ Nikkei Entertainment!</div>
+        <div class="press-date">2022.08</div>
+        <div class="press-title lang-ja">ハリー・ポッター特集号 キャストインタビュー掲載（2号連続）</div>
+        <div class="press-title lang-en">Harry Potter Special Issue — Cast Interview (2 consecutive issues)</div>
+        <p class="press-desc lang-ja">日経BPが発行する大手エンタメ誌。ハリポタ特集号・同年9月号の2号連続でインタビューが掲載。</p>
+        <p class="press-desc lang-en">Published by Nikkei BP. Featured in two consecutive issues — HP special edition and September 2022.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GALLERY ═══ -->
+<section id="gallery" style="background:var(--white);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow lang-ja">ギャラリー</div>
+      <div class="section-eyebrow lang-en">Gallery</div>
+      <h2 class="section-title jp lang-ja">写真・ポートレート</h2>
+      <h2 class="section-title lang-en">Photos &amp; Portraits</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="gallery-grid">
+      <!-- Harry Potter -->
+      <div class="gallery-item" onclick="openLb(this)">
+        <img src="images/IMG_6455 2.JPG" alt="Harry Potter and the Cursed Child — Rose Granger-Weasley">
+      </div>
+      <div class="gallery-item" onclick="openLb(this)">
+        <img src="images/IMG_1292.JPG" alt="">
+      </div>
+      <div class="gallery-item" onclick="openLb(this)">
+        <img src="images/IMG_1076.JPG" alt="">
+      </div>
+      <div class="gallery-item" onclick="openLb(this)">
+        <img src="images/2BF79C5D-A937-4B14-8508-022E14ACDBB0.JPG" alt="">
+      </div>
+      <div class="gallery-item" onclick="openLb(this)">
+        <img src="images/IMG_1303.JPG" alt="">
+      </div>
+      <div class="gallery-item" onclick="openLb(this)">
+        <img src="images/IMG_1341.JPG" alt="">
+      </div>
+      <div class="gallery-item" onclick="openLb(this)">
+        <img src="images/IMG_1344.JPG" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ INSTAGRAM ═══ -->
+<section id="instagram" style="background:var(--off-white);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Social</div>
+      <div class="instagram-header">
+        <div>
+          <h2 class="section-title lang-ja">インスタグラム</h2>
+          <h2 class="section-title lang-en">Instagram</h2>
+          <div class="section-rule"></div>
+        </div>
+        <a href="https://www.instagram.com/hashimoto723_/" target="_blank" rel="noopener" class="instagram-follow">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <span class="lang-ja">フォローする</span><span class="lang-en">Follow</span>
+        </a>
+      </div>
+    </div>
+
+    <behold-widget feed-id="Nrlw97zpnAvYRDYJZ0cU"></behold-widget>
+    <script>
+      (() => {
+        const d=document,s=d.createElement("script");s.type="module";
+        s.src="https://w.behold.so/widget.js";d.head.append(s);
+      })();
+    </script>
+
+    <div class="instagram-cta">
+      <a href="https://www.instagram.com/hashimoto723_/" target="_blank" rel="noopener" class="instagram-follow" style="display:inline-flex;">
+        <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:currentColor;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        <span class="lang-ja">インスタをもっと見る</span><span class="lang-en">View all on Instagram</span>
+      </a>
+      <div class="instagram-handle">@hashimoto723_</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact" style="background:var(--white);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow lang-ja">お問い合わせ</div>
+      <div class="section-eyebrow lang-en">Contact</div>
+      <h2 class="section-title jp lang-ja">ご連絡はこちら</h2>
+      <h2 class="section-title lang-en">Get in Touch</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="contact-info">
+      <p class="lang-ja">出演依頼・取材・コラボレーションなど、お気軽にご連絡ください。</p>
+      <p class="lang-en">For casting inquiries, press requests, collaborations, and all other enquiries, please feel free to reach out.</p>
+      <a href="mailto:hashimotonatsumi.0224@gmail.com" class="contact-email">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        hashimotonatsumi.0224@gmail.com
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-name">橋本菜摘</div>
+      <div class="footer-name-en">Natsumi Hashimoto</div>
+    </div>
+    <div class="sns-links">
+      <a href="https://www.instagram.com/hashimoto723_/" target="_blank" rel="noopener" class="sns-link">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Instagram
+      </a>
+      <a href="https://x.com/NatumiHashimoto" target="_blank" rel="noopener" class="sns-link">
+        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        X
+      </a>
+      <a href="https://www.threads.net/@hashimoto723_" target="_blank" rel="noopener" class="sns-link">
+        <svg viewBox="0 0 24 24"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-.509-1.924-1.45-3.405-2.794-4.405-1.243-.94-2.968-1.49-5.755-1.505h-.012c-3.035.028-5.321.997-6.793 2.878-1.428 1.826-2.163 4.437-2.189 7.762v.015c.026 3.327.76 5.94 2.187 7.766 1.471 1.88 3.756 2.848 6.789 2.877h.012c2.614-.027 4.383-.73 5.624-2.188.756-.9 1.262-2.07 1.505-3.481H12.19v-2.04h10.66l.024.6c.04 1.085-.163 2.6-.528 3.896-1.293 4.642-5.011 7.155-10.16 7.193zm6.495-12.04H18.7c-.063.43-.152.835-.27 1.206-.406 1.28-1.148 2.263-2.26 2.922-1.064.63-2.497.97-4.25.972-3.074-.028-5.394-.997-6.888-2.872-1.434-1.805-2.167-4.416-2.195-7.76v-.015c.028-3.346.762-5.959 2.195-7.765 1.494-1.875 3.815-2.844 6.893-2.871h.013c2.558.025 4.484.722 5.723 2.072.703.762 1.226 1.685 1.6 2.8l1.955-.546c-.484-1.471-1.21-2.72-2.2-3.72-.97-.98-2.16-1.73-3.57-2.243-1.386-.5-2.956-.76-4.697-.77h-.013c-3.357.03-5.94 1.16-7.643 3.28-1.65 2.056-2.5 4.93-2.527 8.506v.017c.027 3.574.878 6.448 2.527 8.505 1.703 2.12 4.286 3.25 7.644 3.28h.012c1.745-.024 3.312-.295 4.69-.81 1.41-.526 2.6-1.3 3.558-2.312.965-1.015 1.673-2.24 2.107-3.666.106-.348.195-.71.27-1.08z"/></svg>
+        Threads
+      </a>
+      <a href="https://www.tiktok.com/@natsumi.hashimoto" target="_blank" rel="noopener" class="sns-link">
+        <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.98a8.09 8.09 0 004.74 1.53V7.06a4.85 4.85 0 01-.97-.37z"/></svg>
+        TikTok
+      </a>
+      <a href="https://www.youtube.com/@Hashimoto723" target="_blank" rel="noopener" class="sns-link">
+        <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        YouTube
+      </a>
+      <a href="https://ameblo.jp/natsumihashimoto/" target="_blank" rel="noopener" class="sns-link">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.374 0 12c0 6.627 5.374 12 12 12 6.627 0 12-5.373 12-12C24 5.374 18.627 0 12 0zm.5 17.5h-1v-6h1v6zm-.5-7.5a1 1 0 110-2 1 1 0 010 2z"/></svg>
+        Ameblo
+      </a>
+    </div>
+    <div class="footer-copy">© 2026 Natsumi Hashimoto. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- ═══ JAVASCRIPT ═══ -->
+<script>
+  function setLang(lang) {
+    if (lang === 'en') {
+      document.body.classList.add('show-en');
+    } else {
+      document.body.classList.remove('show-en');
+    }
+    document.querySelectorAll('.lang-btn').forEach(b => {
+      b.classList.toggle('active', b.dataset.lang === lang);
+    });
+    localStorage.setItem('nh-lang', lang);
+  }
+
+  function toggleMenu() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+
+  function showTab(id, btn) {
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + id).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  window.addEventListener('scroll', () => {
+    document.querySelector('header').style.boxShadow =
+      window.scrollY > 8 ? '0 2px 20px rgba(0,0,0,0.07)' : 'none';
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const saved = localStorage.getItem('nh-lang');
+    if (saved && saved !== 'ja') setLang(saved);
+
+    const form = document.getElementById('contactForm');
+    if (form) {
+      form.addEventListener('submit', async e => {
+        e.preventDefault();
+        const btn = form.querySelector('button[type=submit]');
+        btn.disabled = true;
+        try {
+          const res = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+          });
+          if (res.ok) {
+            form.reset();
+            document.getElementById('formSuccess').style.display = 'block';
+          } else {
+            alert('送信エラーが発生しました。メールでご連絡ください。\nError occurred. Please email directly.');
+          }
+        } catch {
+          alert('通信エラーが発生しました。\nNetwork error. Please try again.');
+        }
+        btn.disabled = false;
+      });
+    }
+  });
+
+  function openLb(el) {
+    const src = el.querySelector('img').src;
+    document.getElementById('lbImg').src = src;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLb() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
+</script>
+
+<!-- ライトボックス -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLb()">
+  <button class="lightbox-close" onclick="closeLb()">&#x2715;</button>
+  <img id="lbImg" src="" alt="" onclick="event.stopPropagation()">
+</div>
+
+</body>
+</html>
