@@ -520,7 +520,7 @@
     /* ── GALLERY ── */
     #gallery { background: var(--white); }
     .gallery-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
     }
     .gallery-item {
       aspect-ratio: 3/4; background: var(--light-gray);
@@ -532,6 +532,15 @@
     }
     .gallery-item:hover img { transform: scale(1.04); }
     .gallery-item.wide { grid-column: span 2; aspect-ratio: 4/3; }
+    .gallery-video { margin-top: 8px; max-width: 66.666%; margin-left: auto; margin-right: auto; }
+    .gallery-video-wrap {
+      position: relative; padding-top: 56.25%;
+      overflow: hidden; background: #000;
+    }
+    .gallery-video-wrap iframe {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%; border: none;
+    }
 
     /* ── LIGHTBOX ── */
     .lightbox-overlay {
@@ -761,7 +770,7 @@
       .works-table .col-dir { grid-column: 3; grid-row: 2; font-size: 0.74rem; color: var(--mid-gray); text-align: right; white-space: nowrap; }
       /* 英語モード: td.lang-en をグリッドアイテムとして表示 */
       body.show-en .works-table td.lang-en { display: block; }
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid { grid-template-columns: repeat(3, 1fr); }
     }
     @media (max-width: 540px) {
       header { padding: 0 16px; }
@@ -780,7 +789,7 @@
       .tab-btn { padding: 8px 10px; font-size: 0.63rem; }
       .works-table .col-title { font-size: 0.8rem; }
       .works-table .col-role { font-size: 0.76rem; }
-      .gallery-grid { grid-template-columns: 1fr 1fr; gap: 5px; }
+      .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 5px; }
       .instagram-grid { grid-template-columns: repeat(2, 1fr); }
       .instagram-header { flex-direction: column; align-items: flex-start; gap: 14px; }
       .section-header { width: 100%; }
@@ -1435,6 +1444,47 @@
     <div id="tab-other" class="tab-panel">
       <table class="works-table">
         <tbody>
+          <!-- YouTube -->
+          <tr>
+            <td colspan="6" style="padding-top:10px;padding-bottom:6px;">
+              <span style="font-family:'Oswald',sans-serif;font-size:0.68rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#C8102E;">
+                YouTube
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="col-year">2024</td>
+            <td class="col-title">
+              <a href="https://www.youtube.com/watch?v=bdQltFQh1nU" target="_blank" rel="noopener">
+                <span class="lang-ja">令和の虎</span><span class="lang-en">Reiwa no Tora</span>
+              </a>
+            </td>
+            <td class="col-role lang-ja">志願者</td><td class="col-role lang-en">Applicant</td>
+            <td class="col-venue">YouTube</td>
+            <td class="col-dir lang-ja"></td><td class="col-dir lang-en"></td>
+          </tr>
+          <tr>
+            <td class="col-year">2024</td>
+            <td class="col-title">
+              <a href="https://www.youtube.com/watch?v=MqaxigmAAyU" target="_blank" rel="noopener">
+                <span class="lang-ja">舞台ハリポタ英会話教室 前編</span><span class="lang-en">Harry Potter Stage English Lesson (Part 1)</span>
+              </a>
+            </td>
+            <td class="col-role lang-ja">ゲスト出演</td><td class="col-role lang-en">Guest</td>
+            <td class="col-venue">YouTube</td>
+            <td class="col-dir lang-ja"></td><td class="col-dir lang-en"></td>
+          </tr>
+          <tr>
+            <td class="col-year">2024</td>
+            <td class="col-title">
+              <a href="https://www.youtube.com/watch?v=IcDNWGnPqUw" target="_blank" rel="noopener">
+                <span class="lang-ja">舞台ハリポタ英会話教室 後編</span><span class="lang-en">Harry Potter Stage English Lesson (Part 2)</span>
+              </a>
+            </td>
+            <td class="col-role lang-ja">ゲスト出演</td><td class="col-role lang-en">Guest</td>
+            <td class="col-venue">YouTube</td>
+            <td class="col-dir lang-ja"></td><td class="col-dir lang-en"></td>
+          </tr>
           <!-- ステージ -->
           <tr>
             <td colspan="6" style="padding-top:10px;padding-bottom:6px;">
@@ -1459,7 +1509,11 @@
           </tr>
           <tr>
             <td class="col-year">2024</td>
-            <td class="col-title"><span class="lang-ja">橋本菜摘ファンミーティング</span><span class="lang-en">Natsumi Hashimoto Fan Meeting</span></td>
+            <td class="col-title">
+              <a href="https://www.youtube.com/watch?v=79_NESWcDx0&pp=ygUM5qmL5pys6I-c5pGY" target="_blank" rel="noopener">
+                <span class="lang-ja">橋本菜摘ファンミーティング</span><span class="lang-en">Natsumi Hashimoto Fan Meeting</span>
+              </a>
+            </td>
             <td class="col-role lang-ja">主催</td><td class="col-role lang-en">Organizer</td>
             <td class="col-venue lang-ja">東京・渋谷</td><td class="col-venue lang-en">Shibuya, Tokyo</td>
           </tr>
@@ -1650,6 +1704,14 @@
       </div>
       <div class="gallery-item" onclick="openLb(this)">
         <img src="IMG_1344.JPG" alt="">
+      </div>
+    </div>
+    <div class="gallery-video">
+      <div class="gallery-video-wrap">
+        <iframe src="https://www.youtube.com/embed/bdQltFQh1nU?rel=0"
+                title="令和の虎 — 橋本菜摘"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
       </div>
     </div>
   </div>
