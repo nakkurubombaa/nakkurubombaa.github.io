@@ -749,9 +749,9 @@
       .hero-eng { font-size: clamp(2.4rem, 11vw, 5rem); }
       /* JAPANESE ACTRESS: 余裕を持たせる */
       .hero-sub { margin-top: 28px; letter-spacing: 0.2em; font-size: 0.72rem; }
-      /* 写真: モバイルでは65%サイズに縮小して右上に配置 */
-      .hero-photo-right { display: block; left: 0; width: 100%; right: 0; opacity: 0.28; background-size: 65% auto; background-position: right top; background-repeat: no-repeat; }
-      .hero-photo-right::before { background: linear-gradient(to right, #fff 0%, #fff 30%, transparent 62%), linear-gradient(to top, #fff 0%, #fff 20%, transparent 40%); }
+      /* 写真: モバイル・右上配置・逆算サイズ */
+      .hero-photo-right { display: block; left: 0; width: 100%; right: 0; opacity: 0.30; background-size: 48% auto; background-position: right 55px; background-repeat: no-repeat; }
+      .hero-photo-right::before { background: linear-gradient(to right, #fff 0%, #fff 28%, transparent 58%), linear-gradient(to top, #fff 0%, #fff 20%, transparent 40%); }
       /* SNS: アイコンのみ・コンパクト1行 */
       .sns-label { display: none; }
       .hero-sns { gap: 6px; flex-wrap: nowrap; justify-content: center; margin-top: 16px; }
