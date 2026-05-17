@@ -736,29 +736,27 @@
       .hamburger { display: flex; }
       header { padding: 0 24px; }
 
-      /* ── Hero: モバイル 左テキスト・右写真レイアウト ── */
-      #hero { min-height: 100vh; padding: 80px 0 48px; justify-content: center; }
-      .hero-inner { flex-direction: column; align-items: flex-start; gap: 6px; padding-left: 24px; width: 57vw; max-width: unset; justify-content: center; }
+      /* ── Hero: モバイル縦積みレイアウト ── */
+      #hero { min-height: auto; padding: 96px 24px 52px; justify-content: flex-start; }
+      .hero-inner { flex-direction: column; align-items: center; gap: 8px; }
       .hero-left { padding-bottom: 0; width: auto; }
       .hero-spacer { display: none; }
-      .hero-right { align-items: flex-start; text-align: left; }
-      .hero-meta { align-items: flex-start; }
       /* 漢字: 横書き・小さめ */
-      .hero-kanji-vert { writing-mode: horizontal-tb; font-size: 1.05rem; letter-spacing: 0.3em; }
-      /* 名前ブロック */
-      .hero-name-wrap { margin-top: 22px; }
-      .hero-circle { width: clamp(88px, 21vw, 140px); height: clamp(88px, 21vw, 140px); }
-      .hero-eng { font-size: clamp(1.8rem, 8vw, 3.2rem); }
-      /* JAPANESE ACTRESS */
-      .hero-sub { margin-top: 16px; letter-spacing: 0.1em; font-size: 0.6rem; }
-      /* 写真: 右に表示 */
-      .hero-photo-right { display: block; width: 44vw; }
-      /* SNS: アイコンのみ・コンパクト */
+      .hero-kanji-vert { writing-mode: horizontal-tb; font-size: 1.3rem; letter-spacing: 0.3em; }
+      /* 名前ブロック: 上マージンでサークルが漢字に被らないようにする */
+      .hero-name-wrap { margin-top: 52px; }
+      .hero-circle { width: clamp(110px, 30vw, 180px); height: clamp(110px, 30vw, 180px); }
+      .hero-eng { font-size: clamp(2.4rem, 11vw, 5rem); }
+      /* JAPANESE ACTRESS: 余裕を持たせる */
+      .hero-sub { margin-top: 28px; letter-spacing: 0.2em; font-size: 0.72rem; }
+      /* 写真: モバイルでは全面薄い透かし */
+      .hero-photo-right { display: block; width: 100%; opacity: 0.12; }
+      .hero-photo-right::before { background: none; }
+      /* SNS: アイコンのみ・コンパクト1行 */
       .sns-label { display: none; }
-      .hero-sns { gap: 5px; flex-wrap: wrap; justify-content: flex-start; margin-top: 12px; }
-      .hero-sns a { padding: 7px; border-radius: 50%; gap: 0; }
-      .hero-sns a svg { width: 15px; height: 15px; }
-      .hero-lang { margin-top: 12px; }
+      .hero-sns { gap: 6px; flex-wrap: nowrap; justify-content: center; margin-top: 16px; }
+      .hero-sns a { padding: 9px; border-radius: 50%; gap: 0; }
+      .hero-sns a svg { width: 18px; height: 18px; }
 
       /* ── Other sections ── */
       .about-grid { grid-template-columns: 1fr; }
